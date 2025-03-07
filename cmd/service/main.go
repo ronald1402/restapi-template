@@ -21,7 +21,7 @@ func main() {
 
 	e := server.Start()
 	defer server.Stop(e)
-	log.Infof("server started")
+
 	repo := repository.NewRepository()
 	svc := service.NewService(repo)
 	handler.NewHandler(e, svc)
